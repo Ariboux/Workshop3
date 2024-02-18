@@ -1,13 +1,13 @@
 ## Project Overview
 
-This project involves building an API aggregator service that collects predictions from multiple machine learning models and computes aggregated predictions and means across these predictions. The models used in this project include a logistic regression model for predicting iris species based on sepal and petal measurements.
+This project involves building an API aggregator service that collects predictions from multiple machine learning models and computes aggregated predictions and means across these predictions. The model is used in this project is a logistic regression model for predicting iris species based on sepal and petal measurements and there is the name of each model used in the json response.
 
 
 ## Components
 
 * Aggregator Service (aggreg.js): This component is responsible for aggregating predictions from multiple models and calculating mean probabilities for each class across all predictions. It uses Axios to make HTTP requests to model endpoints, aggregates predictions, and computes mean probabilities.
 
-* Model Service (app.js): This component serves as the API endpoint for making predictions using a logistic regression model. It receives input parameters (sepal and petal measurements) via HTTP GET requests, invokes the logistic regression model to make predictions, and returns the prediction results in JSON format.
+* Model Service (app.js): This component serves as the API endpoint for making predictions using a logistic regression model in my case. It receives input parameters (sepal and petal measurements) via HTTP GET requests, invokes the logistic regression model to make predictions, and returns the prediction results in JSON format.
 
 * Logistic Regression Model (predict.py): This Python script contains code for loading the Iris dataset, training a logistic regression model, and making predictions based on input parameters. It uses scikit-learn for model training and prediction.
 
@@ -16,18 +16,19 @@ This project involves building an API aggregator service that collects predictio
 
 - Clone the repository to your local machine.
 - Navigate to the project directory.
-- Install dependencies by running npm install.
-- Start the Aggregator Service by running node aggreg.js.
-- Start the Model Service by running node app.js.
+- Install dependencies by running `npm install`.
+- Start the Aggregator Service by running `node aggreg.js`.
+- Start the Model Service by running `node app.js`.
 - Make predictions by sending HTTP GET requests to http://localhost:3000/predict with query parameters for sepal and petal measurements.
 - Access aggregated predictions and mean probabilities by sending HTTP GET requests to http://localhost:4000/aggregate-predict.
 
 
 ## Dependencies
 
-Express.js: Web application framework for Node.js used for building the API.
-Axios: Promise-based HTTP client for making requests to model endpoints.
-scikit-learn: Python library for machine learning, used for logistic regression model training and prediction.
+- Express.js: Web application framework for Node.js used for building the API.
+- Axios: Promise-based HTTP client for making requests to model endpoints.
+- scikit-learn: Python library for machine learning, used for logistic regression model training and prediction.
+
 
 ## File Structure
 
@@ -47,9 +48,9 @@ project/
 
 ## Additional Notes
 
-Ensure that all necessary dependencies are installed and configured before running the services.
-Monitor the console output for any errors or log messages while running the services.
-Make sure that model endpoints are accessible and responding correctly to HTTP requests.
+* Ensure that all necessary dependencies are installed and configured before running the services.
+* Monitor the console output for any errors or log messages while running the services.
+* Make sure that model endpoints are accessible and responding correctly to HTTP requests.
 
 
 ## Contributors
